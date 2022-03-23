@@ -20,7 +20,8 @@ const Modal = ({ setIsOpen,day }: {setIsOpen: boolean | any, day: number | any})
       {day.event &&  day.event.map((e: any, index: any) => {
         return(
           <div key={index}>
-            <Link href={`/organization/events/${e.slug}`}>{e.title}</Link>
+            {/* <Link href={`/organization/events/${e.slug}`}>{e.title}</Link> */}
+            {e.title}
 
           </div>
         )

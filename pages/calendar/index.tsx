@@ -1,11 +1,12 @@
 import Calendar from '@/features/calendar';
 import * as React from 'react';
+import eventsData from "@/features/addons/events.json"
 
 
 
+export default function EventCalendar(){
+    const [events] = React.useState(eventsData)
 
-
-export default function EventCalendar({events}:{events: any}){
 
     if(typeof events[0] === "undefined") return <>Coming Soon</>;
     if(events.length <= 0) return <>Coming Soon</>;
